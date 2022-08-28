@@ -43,7 +43,7 @@ function App() {
     <div className="flex justify-center min-h-screen bg-slate-900">
       <div className="flex flex-col justify-center items-center container mx-auto gap-2.5">
         <div className="flex flex-col	max-w-md w-full">
-          <label className="py-2 font-normal font-semibold text-sm text-slate-400">
+          <label className="py-2 font-semibold text-sm text-slate-400">
             Result
           </label>
           <input
@@ -56,7 +56,7 @@ function App() {
           />
         </div>
         <div className="flex flex-col max-w-md w-full">
-          <label className="py-2 font-normal font-semibold text-sm text-slate-400">
+          <label className="py-2 font-normal text-sm text-slate-400">
             Length:{" "}
             <strong className="font-semibold text-teal-300">
               {passwordOptions.length}
@@ -81,7 +81,7 @@ function App() {
           </div>
         </div>
         <div className="flex flex-col max-w-md w-full">
-          <label className="py-1 font-normal font-semibold text-sm text-slate-400">
+          <label className="py-1 font-semibold text-sm text-slate-400">
             Options
           </label>
           <div className="flex flex-col	max-w-md w-full bg-slate-800 p-5 rounded-md">
