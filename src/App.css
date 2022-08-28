@@ -773,18 +773,9 @@ html {
   color: rgb(255 255 255 / var(--tw-text-opacity));
 }
 
-.text-pink-500 {
-  --tw-text-opacity: 1;
-  color: rgb(236 72 153 / var(--tw-text-opacity));
-}
-
 .text-teal-300 {
   --tw-text-opacity: 1;
   color: rgb(94 234 212 / var(--tw-text-opacity));
-}
-
-.accent-sky-400 {
-  accent-color: #38bdf8;
 }
 
 .accent-teal-300 {
@@ -793,6 +784,14 @@ html {
 
 .outline-0 {
   outline-width: 0px;
+}
+
+.placeholder\:text-center::-moz-placeholder {
+  text-align: center;
+}
+
+.placeholder\:text-center::placeholder {
+  text-align: center;
 }
 
 .placeholder\:text-xs::-moz-placeholder {
@@ -805,14 +804,14 @@ html {
   line-height: 1rem;
 }
 
-.placeholder\:text-pink-500::-moz-placeholder {
+.placeholder\:text-teal-300::-moz-placeholder {
   --tw-text-opacity: 1;
-  color: rgb(236 72 153 / var(--tw-text-opacity));
+  color: rgb(94 234 212 / var(--tw-text-opacity));
 }
 
-.placeholder\:text-pink-500::placeholder {
+.placeholder\:text-teal-300::placeholder {
   --tw-text-opacity: 1;
-  color: rgb(236 72 153 / var(--tw-text-opacity));
+  color: rgb(94 234 212 / var(--tw-text-opacity));
 }
 
 .after\:absolute::after {
@@ -877,16 +876,6 @@ html {
 .hover\:bg-teal-300:hover {
   --tw-bg-opacity: 1;
   background-color: rgb(94 234 212 / var(--tw-bg-opacity));
-}
-
-.hover\:text-white:hover {
-  --tw-text-opacity: 1;
-  color: rgb(255 255 255 / var(--tw-text-opacity));
-}
-
-.hover\:text-slate-900:hover {
-  --tw-text-opacity: 1;
-  color: rgb(15 23 42 / var(--tw-text-opacity));
 }
 
 .hover\:text-slate-800:hover {

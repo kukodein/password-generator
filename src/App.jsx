@@ -28,14 +28,8 @@ function App() {
     if (passwordOptions.include.uppercase) keys += charset.uppercase;
     if (passwordOptions.include.lowercase) keys += charset.lowercase;
 
- 
-    if (
-      !passwordOptions.include.numbers ||
-      !passwordOptions.include.symbols ||
-      !passwordOptions.include.uppercase ||
-      !passwordOptions.include.lowercase
-    ) {
-      alert("You must select at least one Include options.");
+    if (Object.values(passwordOptions.include).every((x) => x === false)) {
+      alert("You must select at least option!");
     } else {
       for (let i = 0; i < passwordOptions.length; i++) {
         console.log(keys[Math.floor(Math.random() * keys.length)]);
@@ -58,7 +52,7 @@ function App() {
             disabled
             type="text"
             placeholder="Press generate password for result!"
-            className="placeholder:text-xs placeholder:text-pink-500 font-mono px-3 py-2 bg-slate-800 rounded-md outline-0 text-white font-normal text-xl w-full"
+            className="placeholder:text-center placeholder:text-xs placeholder:text-teal-300 font-mono px-3 py-2 bg-slate-800 rounded-md outline-0 text-white font-normal text-xl w-full"
           />
         </div>
         <div className="flex flex-col max-w-md w-full">
