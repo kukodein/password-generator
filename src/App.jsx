@@ -1,4 +1,5 @@
 import { useState } from "react";
+import ClipboardIcon from "./components/ClipboardIcon";
 import "./App.css";
 
 function App() {
@@ -39,10 +40,20 @@ function App() {
     }
   };
 
+  const copyPassword = () => {
+    if (passwordResult === "") {
+      return alert("You should create password before copy password!");
+    }
+    return (
+      navigator.clipboard.writeText(passwordResult),
+      alert("Password copyied succesful!")
+    );
+  };
+
   return (
     <div className="flex justify-center min-h-screen bg-slate-900">
       <div className="flex flex-col justify-center items-center container mx-auto gap-2.5">
-        <div className="flex flex-col	max-w-md w-full">
+        <div className="flex flex-col	max-w-md w-full relative">
           <label className="py-2 font-semibold text-sm text-slate-400">
             Result
           </label>
@@ -54,6 +65,12 @@ function App() {
             placeholder="Press generate password for result!"
             className="placeholder:text-center placeholder:text-xs placeholder:text-teal-300 font-mono px-3 py-2 bg-slate-800 rounded-md outline-0 text-white font-normal text-xl w-full"
           />
+          {passwordResult !== "" && (
+            <ClipboardIcon
+              styles="cursor-pointer fill-slate-400 hover:fill-teal-300 absolute bottom-2.5 right-2"
+              onClick={() => copyPassword()}
+            />
+          )}
         </div>
         <div className="flex flex-col max-w-md w-full">
           <label className="py-2 font-normal text-sm text-slate-400">
